@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/webapp/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/webapp/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/service/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/webui/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: exo:exoplatform.services.jcr.api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: exo:exoplatform.commons:1.0" level="project" />
+    <orderEntry type="library" name="Maven: exo:exoplatform.services.common.api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: exo:exoplatform.container:1.0" level="project" />
+    <orderEntry type="library" name="Maven: exo:exoplatform.services.indexing.api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.exoplatform.ecms:ecms-core-services:4.1.x-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.gatein.portal:exo.portal.component.resources:3.5.x-PLF-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.exoplatform.ws:exo.ws.rest.core:2.3.x-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
+    <orderEntry type="library" name="Maven: javax.portlet:portlet-api:2.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.ws.rs:jsr311-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20070829" level="project" />
+    <orderEntry type="library" name="Maven: org.exoplatform.social:social-component-core:4.1.x-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+  </component>
+</module>
+

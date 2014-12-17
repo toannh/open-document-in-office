@@ -1,0 +1,4 @@
+org/exoplatform/com/opendocument/service/enties/DocumentType.class
+org/exoplatform/com/opendocument/service/DocumentTypeService.class
+org/exoplatform/com/opendocument/service/rest/OpenInOfficeConnector.class
+org/exoplatform/com/opendocument/service/impl/DocumentTypeServiceImpl.class

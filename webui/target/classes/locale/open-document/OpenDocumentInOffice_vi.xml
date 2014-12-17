@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+  <OpenDocumentInOffice>
+    <label>
+      <exo.remote-edit.word>Mở với Word</exo.remote-edit.word>
+      <exo.remote-edit.excel>Mở với Excel</exo.remote-edit.excel>
+      <exo.remote-edit.powerpoint>Mở với Powerpoint</exo.remote-edit.powerpoint>
+      <exo.remote-edit.desktop>Mở với Desktop</exo.remote-edit.desktop>
+      <exo.remote-edit.desktop-app>Mở với</exo.remote-edit.desktop-app>
+    </label>
+  </OpenDocumentInOffice>
+
+</bundle>

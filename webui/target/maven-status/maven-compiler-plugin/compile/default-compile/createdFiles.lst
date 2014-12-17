@@ -1,0 +1,6 @@
+org/exoplatform/addon/opendocument/webui/component/OpenDocumentManageComponent.class
+org/exoplatform/addon/opendocument/webui/component/UIOpenDocumentForm.class
+org/exoplatform/addon/opendocument/webui/component/UIOpenDocumentForm$CancelActionListener.class
+org/exoplatform/addon/opendocument/webui/component/filter/IsNtFileFilter.class
+org/exoplatform/addon/opendocument/webui/component/UIOpenDocumentForm$ReadOnlyActionListener.class
+org/exoplatform/addon/opendocument/webui/component/OpenDocumentManageComponent$OpenDocumentActionListener.class
