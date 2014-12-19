@@ -10,4 +10,15 @@
     </label>
   </OpenDocumentInOffice>
 
+  <UIPopupWindow>
+    <title>
+      <UIReadOnlyFileConfirmMessage>Open Document Read-only</UIReadOnlyFileConfirmMessage>
+    </title>
+  </UIPopupWindow>
+
+  <UIPopupMenu>
+    <msg>
+      <lock-node-read-only>This file is locked by {0}. Open read only?</lock-node-read-only>
+    </msg>
+  </UIPopupMenu>
 </bundle>

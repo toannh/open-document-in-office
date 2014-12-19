@@ -10,4 +10,16 @@
     </label>
   </OpenDocumentInOffice>
 
+  <UIPopupWindow>
+    <title>
+      <UIReadOnlyFileConfirmMessage>Tệp tin bị khóa </UIReadOnlyFileConfirmMessage>
+    </title>
+  </UIPopupWindow>
+
+  <UIPopupMenu>
+    <msg>
+      <lock-node-read-only>Tệp tin này bị khóa bởi user {0}. Mở chỉ đọc?</lock-node-read-only>
+    </msg>
+  </UIPopupMenu>
+
 </bundle>

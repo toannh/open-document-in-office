@@ -39,12 +39,13 @@ public class OpenInOfficeConnector implements ResourceContainer {
 
   private final int CACHED_TIME = 60*24*30*12;
 
-  public static final String SOC_PROP_PARAMS_NODE        = "soc:params";
-  public static final String SOC_WORKSPACE               = "social";
-  public static final String SOC_PROP_CONTENT_LINK       = "contenLink";
-  public static final String SOC_PROP_REPOSITORY         = "repository";
-  public static final String SOC_PROP_WORKSPACE          = "workspace";
+  private static final String SOC_PROP_PARAMS_NODE        = "soc:params";
+  private static final String SOC_WORKSPACE               = "social";
+  private static final String SOC_PROP_CONTENT_LINK       = "contenLink";
+  private static final String SOC_PROP_REPOSITORY         = "repository";
+  private static final String SOC_PROP_WORKSPACE          = "workspace";
 
+  private static final String VERSION_MIXIN ="mix:versionable";
 
   /**
    * Return a JsonObject's current file to update display titles
@@ -126,19 +127,28 @@ public class OpenInOfficeConnector implements ResourceContainer {
     Node node = session.getNodeByUUID(activityId);
     Node nodeSocParams = node.getNode(SOC_PROP_PARAMS_NODE);
 
+    String ws = session.getWorkspace().getName();
     String nodePath = node.getPath();
+    if(nodeSocParams.hasProperty(SOC_PROP_WORKSPACE)){
+      ws = nodeSocParams.getProperty(SOC_PROP_WORKSPACE).getString();
+    }
 
     if(nodeSocParams.hasProperty(SOC_PROP_CONTENT_LINK)){
       nodePath = nodeSocParams.getProperty(SOC_PROP_CONTENT_LINK).getString();
     }
 
-    // build full node path
-    String filePath = httpServletRequest.getScheme()+ "://" + httpServletRequest.getServerName() + ":"
+    String _ws = nodePath.split("/")[0];
+    String _repo = nodePath.split("/")[1];
+
+    String filePath = StringUtils.replace(nodePath, _repo+"/"+_ws, "");//nodePath.replace(_ws+_repo, "");
+    String absolutePath = httpServletRequest.getScheme()+ "://" + httpServletRequest.getServerName() + ":"
             +httpServletRequest.getServerPort() + "/"
             + WCMCoreUtils.getRestContextName()+ "/private/jcr/" + nodePath;
 
     //return & stored on cached
     JSONObject rs = new JSONObject();
+    rs.put("absolutePath", absolutePath);
+    rs.put("workspace", ws);
     rs.put("filePath", filePath);
     builder = Response.ok(rs.toString(), MediaType.APPLICATION_JSON);
     builder.tag(etag);
@@ -161,7 +171,16 @@ public class OpenInOfficeConnector implements ResourceContainer {
   ) throws Exception {
     Session session = WCMCoreUtils.getSystemSessionProvider().getSession(workspace, WCMCoreUtils.getRepository());
     Node node = (Node)session.getItem(filePath);
+
+    if(node.canAddMixin(VERSION_MIXIN)){
+      node.addMixin(VERSION_MIXIN);
+      node.save();
+      node.checkin();
+      node.checkout();
+    }
+
     if(!node.isCheckedOut()) node.checkout();
+
     return Response.ok(String.valueOf(node.isCheckedOut()), MediaType.TEXT_PLAIN).build();
   }
 }
