@@ -11,6 +11,12 @@ import java.io.IOException;
 public class UIOpenDocumentPortlet extends GenericPortlet {
 
   @RenderMode(name = "view")
-  public void OpenDocument(RenderRequest request, RenderResponse response) throws IOException, PortletException { }
+  public void OpenDocument(RenderRequest request, RenderResponse response) throws IOException, PortletException {
+
+    PortletRequestDispatcher prDispatcher = getPortletContext().getRequestDispatcher("/jsp/hello.jsp");
+
+    prDispatcher.include(request, response);
+
+   }
 
 }

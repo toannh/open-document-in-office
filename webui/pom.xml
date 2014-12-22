@@ -31,7 +31,7 @@
     <dependency>
       <groupId>org.exoplatform.commons</groupId>
       <artifactId>commons-webui-component</artifactId>
-      <version>${exoplatform.version}</version>
+      <version>4.2.x-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
 

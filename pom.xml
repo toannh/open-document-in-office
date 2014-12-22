@@ -31,8 +31,8 @@
   <name>eXo Open Document In Office Extension</name>
   <description>A addon to open document in desktop application of eXo.</description>
   <properties>
-    <commons-lang3.version>3.1</commons-lang3.version>
-    <exoplatform.version>4.1.x-SNAPSHOT</exoplatform.version>
+    <exoplatform.version>4.2.x-ecms-open-doc-in-office-SNAPSHOT</exoplatform.version>
+    <exoplatform.kernel.version>2.4.x-SNAPSHOT</exoplatform.kernel.version>
   </properties>
 
 </project>

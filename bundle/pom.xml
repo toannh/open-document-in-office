@@ -41,13 +41,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>webui</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-      <type>jar</type>
-    </dependency>
+
 
   </dependencies>
   <!--maven build-->
