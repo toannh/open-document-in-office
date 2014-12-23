@@ -5,12 +5,6 @@
         http://www.exoplatform.org/xml/ns/kernel_1_1.xsd"
         xmlns="http://www.exoplatform.org/xml/ns/kernel_1_1.xsd">
 
-  <!--regis service to container-->
-
-  <component>
-    <type>org.exoplatform.com.opendocument.service.rest.OpenInOfficeConnector</type>
-  </component>
-
   <!--regis to container-->
   <external-component-plugins>
     <target-component>org.exoplatform.commons.addons.AddOnService</target-component>

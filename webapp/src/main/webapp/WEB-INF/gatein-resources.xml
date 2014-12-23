@@ -8,10 +8,11 @@
     <name>OpenDocument</name>
     <module>
       <depends>
-        <module>openDocumentInOfficeExt</module>
+        <module>ecm-webdav</module>
       </depends>
     </module>
   </portlet>
+
   <module>
     <name>ecm-webdav</name>
     <as>ecm-webdav</as>
@@ -19,20 +20,5 @@
       <path>/js/ITHitWebDAVClient.js</path>
     </script>
   </module>
-  
-  <module>
-    <name>openDocumentInOfficeExt</name>
-    <as>openDocumentInOfficeExt</as>
-    <script>
-      <path>/js/OpenDocumentInOfficeExt.js</path>
-    </script>
-    <depends>
-      <module>jquery</module>
-      <as>gj</as>
-    </depends>
-    <depends>
-      <module>ecm-webdav</module>
-      <as>ecmWebdav</as>
-    </depends>
-  </module>
+
 </gatein-resources>
